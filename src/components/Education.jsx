@@ -48,18 +48,18 @@ export default function Education() {
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-orange-500/5 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2 group-hover:bg-orange-500/10 transition-colors" />
               
-              <div className="flex items-start gap-6">
+              <div className="flex flex-col items-center text-center md:items-start md:text-left md:flex-row gap-6">
                 <div className="w-14 h-14 rounded-xl bg-orange-500/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <GraduationCap className="text-orange-500" size={28} />
                 </div>
                 
-                <div className="flex-1">
-                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-800/50 text-orange-400 text-xs font-semibold border border-slate-700/50">
+                <div className="flex-1 w-full">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-center md:justify-between gap-3 mb-4">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-800/50 text-orange-400 text-[10px] sm:text-xs font-semibold border border-slate-700/50 w-fit mx-auto sm:mx-0">
                       <Calendar size={12} />
                       {edu.duration}
                     </span>
-                    <span className="inline-flex items-center gap-1.5 text-slate-500 text-xs">
+                    <span className="inline-flex items-center gap-1.5 text-slate-500 text-[10px] sm:text-xs justify-center">
                       <MapPin size={12} />
                       {edu.location}
                     </span>

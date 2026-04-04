@@ -88,25 +88,25 @@ export default function Skills() {
           className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
         >
           {skills.map((skill) => (
-            <motion.div
-              key={skill.name}
-              variants={itemVariants}
-              whileHover={{ y: -4, scale: 1.02 }}
-              className="glass-panel p-6 flex flex-col items-center gap-4 cursor-default group hover:bg-slate-800/40 transition-all duration-300 border-slate-800/40"
-            >
-              <div className="w-12 h-12 flex items-center justify-center relative">
-                <div className="absolute inset-0 bg-orange-500/5 rounded-full blur-xl group-hover:bg-orange-500/10 transition-colors" />
-                <img
-                  src={skill.logo}
-                  alt={skill.name}
-                  className="w-10 h-10 object-contain relative z-10 transition-transform duration-500 group-hover:rotate-6"
-                  style={skill.name === 'Express.js' || skill.name === 'GitHub' ? { filter: 'invert(1)' } : {}}
-                />
-              </div>
-              <span className="text-xs font-semibold tracking-wider uppercase text-slate-500 group-hover:text-orange-400 transition-colors text-center leading-tight">
-                {skill.name}
-              </span>
-            </motion.div>
+          <motion.div
+            key={skill.name}
+            variants={itemVariants}
+            whileHover={{ y: -4, scale: 1.02 }}
+            className="glass-panel p-4 md:p-6 flex flex-col items-center gap-3 md:gap-4 cursor-default group hover:bg-slate-800/40 transition-all duration-300 border-slate-800/40"
+          >
+            <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center relative">
+              <div className="absolute inset-0 bg-orange-500/5 rounded-full blur-xl group-hover:bg-orange-500/10 transition-colors" />
+              <img
+                src={skill.logo}
+                alt={skill.name}
+                className="w-8 h-8 md:w-10 md:h-10 object-contain relative z-10 transition-transform duration-500 group-hover:rotate-6"
+                style={skill.name === 'Express.js' || skill.name === 'GitHub' ? { filter: 'invert(1)' } : {}}
+              />
+            </div>
+            <span className="text-[10px] md:text-xs font-semibold tracking-wider uppercase text-slate-500 group-hover:text-orange-400 transition-colors text-center leading-tight">
+              {skill.name}
+            </span>
+          </motion.div>
           ))}
         </motion.div>
       </div>

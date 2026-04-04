@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, User, Store, Wallet, ChefHat } from 'lucide-react';
+import { ExternalLink, User, Store, Wallet, ChefHat,ArrowRight } from 'lucide-react';
 
 const Github = ({ className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -77,9 +77,9 @@ export default function Projects() {
                 <div className="absolute -top-10 -left-10 w-40 h-40 bg-white/5 rounded-full blur-3xl group-hover:bg-white/10 transition-colors" />
               </div>
 
-              <div className="p-8 flex-1 flex flex-col">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-2xl font-bold text-white group-hover:text-orange-400 transition-colors">
+              <div className="p-6 md:p-8 flex-1 flex flex-col items-center text-center md:items-start md:text-left">
+                <div className="flex justify-between items-start w-full mb-4">
+                  <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-orange-400 transition-colors">
                     {project.title}
                   </h3>
                   <a
@@ -92,28 +92,29 @@ export default function Projects() {
                   </a>
                 </div>
 
-                <p className="text-slate-400 mb-6 leading-relaxed flex-1">
+                <p className="text-slate-400 mb-6 leading-relaxed flex-1 text-sm md:text-base">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-8">
+                <div className="flex flex-wrap justify-center md:justify-start gap-1.5 md:gap-2 mb-8">
                   {project.tech.map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-slate-800/50 text-slate-400 text-[10px] uppercase tracking-wider font-semibold rounded-md border border-slate-700/30">
+                    <span key={tech} className="px-2.5 py-1 bg-slate-800/50 text-slate-400 text-[9px] md:text-[10px] uppercase tracking-wider font-semibold rounded-md border border-slate-700/30">
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-slate-800/50">
+                <div className="flex flex-wrap items-center justify-center md:justify-start gap-5 pt-4 border-t border-slate-800/50 w-full">
                   {project.links.map((link) => (
                     <a
                       key={link.name}
                       href={link.url}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex items-center gap-1.5 text-xs font-bold text-orange-500 hover:text-orange-400 transition-colors uppercase tracking-widest"
+                      className="flex items-center gap-1.5 text-[10px] md:text-xs font-bold text-orange-500 hover:text-orange-400 transition-colors uppercase tracking-widest group/link"
                     >
                       {link.icon} {link.name}
+                      <ArrowRight size={10} className="opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all" />
                     </a>
                   ))}
                 </div>

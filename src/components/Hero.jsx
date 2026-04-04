@@ -26,37 +26,37 @@ export default function Hero() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col gap-6"
+          className="flex flex-col items-center text-center md:items-start md:text-left gap-6"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel w-fit border-orange-500/20 bg-orange-500/5">
             <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
             <span className="text-sm font-medium text-orange-400">Available for work</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white leading-[1.1]">
+          <h1 className="text-4xl md:text-7xl font-bold tracking-tight text-white leading-[1.1]">
             Hi, I'm <br />
             <span className="text-gradient">Devansh Dholiya</span>
           </h1>
           
-          <h2 className="text-xl md:text-2xl font-medium text-slate-400">
+          <h2 className="text-lg md:text-2xl font-medium text-slate-400">
             Full Stack Developer <span className="text-orange-500">(</span>MERN Stack<span className="text-orange-500">)</span>
           </h2>
           
-          <p className="text-slate-400 text-lg max-w-lg leading-relaxed">
+          <p className="text-slate-400 text-base md:text-lg max-w-lg leading-relaxed">
             I build modern, scalable, and responsive web applications. Passionate about clean UI and solving complex problems with elegant code.
           </p>
           
-          <div className="flex flex-wrap items-center gap-4 pt-4">
-            <a href="#projects" className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-full flex items-center gap-2 transition-all hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] group">
+          <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 w-full md:w-auto">
+            <a href="#projects" className="w-full sm:w-auto px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-full flex items-center justify-center gap-2 transition-all hover:shadow-[0_0_20px_rgba(249,115,22,0.4)] group whitespace-nowrap">
               View Projects
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="#contact" className="px-8 py-4 glass-panel text-white font-medium hover:bg-slate-800 transition-colors">
+            <a href="#contact" className="w-full sm:w-auto px-8 py-4 glass-panel text-white font-bold hover:bg-slate-800 transition-colors text-center border-slate-700/50">
               Contact Me
             </a>
           </div>
 
-          <div className="flex items-center gap-6 pt-6">
+          <div className="flex items-center justify-center md:justify-start gap-8 pt-8 md:pt-6 border-t border-slate-800/50 md:border-t-0 mt-2 md:mt-0 w-full md:w-auto">
             <a href="https://github.com/DEVANSHDHOLIYA" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">
               <Github size={24} />
             </a>

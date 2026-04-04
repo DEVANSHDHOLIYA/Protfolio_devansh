@@ -76,11 +76,19 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-lg font-medium text-slate-300 hover:text-orange-400 py-2 border-b border-slate-800/50"
+                className="text-lg font-medium text-slate-300 hover:text-orange-400 py-3 border-b border-slate-800/50 flex items-center justify-between group"
               >
                 {link.name}
+                <div className="w-1.5 h-1.5 rounded-full bg-orange-500 opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
             ))}
+            <a
+              href="#contact"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="mt-4 px-6 py-4 bg-orange-500 hover:bg-orange-600 text-white text-center font-bold rounded-xl transition-all shadow-[0_4px_20px_rgba(249,115,22,0.3)]"
+            >
+              Let's Talk
+            </a>
           </motion.div>
         )}
       </AnimatePresence>

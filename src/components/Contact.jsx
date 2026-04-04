@@ -21,11 +21,11 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-6xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Let's <span className="text-orange-500">Connect</span>
           </h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-orange-600 to-orange-400 mx-auto rounded-full mb-8" />
-          <p className="text-slate-400 text-xl max-w-2xl mx-auto leading-relaxed">
+          <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
             I'm always open to new opportunities and interesting collaborations. Feel free to reach out through any of these platforms!
           </p>
         </motion.div>
@@ -40,15 +40,15 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             whileHover={{ y: -8 }}
-            className="glass-panel p-10 flex flex-col items-center gap-6 group hover:border-orange-500/40 transition-all duration-300"
+            className="glass-panel p-8 md:p-10 flex flex-col items-center gap-6 group hover:border-orange-500/40 transition-all duration-300"
           >
-            <div className="w-20 h-20 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-              <Mail className="text-orange-500" size={40} />
+            <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+              <Mail className="text-orange-500" size={32} />
             </div>
             <div className="text-center">
-              <h3 className="text-2xl font-bold text-white mb-2">Send an Email</h3>
-              <p className="text-slate-500 text-sm mb-6">Direct communication via Gmail</p>
-              <div className="flex items-center gap-2 text-orange-400 font-mono text-sm group-hover:gap-4 transition-all">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Send an Email</h3>
+              <p className="text-slate-500 text-xs md:text-sm mb-6">Direct communication via Gmail</p>
+              <div className="flex items-center justify-center gap-2 text-orange-400 font-mono text-xs md:text-sm group-hover:gap-4 transition-all">
                 Compose Now <ArrowRight size={16} />
               </div>
             </div>
@@ -63,15 +63,15 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             whileHover={{ y: -8 }}
-            className="glass-panel p-10 flex flex-col items-center gap-6 group hover:border-[#0A66C2]/40 transition-all duration-300"
+            className="glass-panel p-8 md:p-10 flex flex-col items-center gap-6 group hover:border-[#0A66C2]/40 transition-all duration-300"
           >
-            <div className="w-20 h-20 rounded-2xl bg-[#0A66C2]/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-              <Linkedin className="text-[#0A66C2]" size={40} />
+            <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-[#0A66C2]/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+              <Linkedin className="text-[#0A66C2]" size={32} />
             </div>
             <div className="text-center">
-              <h3 className="text-2xl font-bold text-white mb-2">LinkedIn</h3>
-              <p className="text-slate-500 text-sm mb-6">Connect for professional networking</p>
-              <div className="flex items-center gap-2 text-[#0A66C2] font-mono text-sm group-hover:gap-4 transition-all">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">LinkedIn</h3>
+              <p className="text-slate-500 text-xs md:text-sm mb-6">Connect for professional networking</p>
+              <div className="flex items-center justify-center gap-2 text-[#0A66C2] font-mono text-xs md:text-sm group-hover:gap-4 transition-all">
                 Visit Profile <ArrowRight size={16} />
               </div>
             </div>

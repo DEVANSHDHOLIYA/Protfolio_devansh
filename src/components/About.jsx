@@ -25,7 +25,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="glass-panel p-10 relative overflow-hidden flex flex-col justify-center"
+            className="glass-panel p-8 md:p-10 relative overflow-hidden flex flex-col items-center text-center md:items-start md:text-left justify-center"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
             
@@ -37,22 +37,22 @@ export default function About() {
               Whether it's designing a seamless user interface or architecting a robust backend database, I love bringing ideas to life on the web.
             </p>
             
-            <div className="flex gap-8 pt-6 border-t border-slate-800/50 items-center justify-between">
-              <div className="flex gap-8">
-                <div className="flex flex-col">
-                  <span className="text-3xl font-bold text-orange-500 font-mono">02</span>
-                  <span className="text-xs uppercase tracking-widest text-slate-500 mt-1">Projects Built</span>
+            <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 pt-8 border-t border-slate-800/50 items-center justify-between w-full">
+              <div className="flex gap-8 justify-around sm:justify-start w-full sm:w-auto">
+                <div className="flex flex-col items-center sm:items-start">
+                  <span className="text-3xl md:text-3xl font-bold text-orange-500 font-mono">02</span>
+                  <span className="text-[10px] md:text-xs uppercase tracking-widest text-slate-500 mt-1">Projects Built</span>
                 </div>
-                <div className="flex flex-col">
-                  <span className="text-3xl font-bold text-orange-500 font-mono">100%</span>
-                  <span className="text-xs uppercase tracking-widest text-slate-500 mt-1">Dedication</span>
+                <div className="flex flex-col items-center sm:items-start">
+                  <span className="text-3xl md:text-3xl font-bold text-orange-500 font-mono">100%</span>
+                  <span className="text-[10px] md:text-xs uppercase tracking-widest text-slate-500 mt-1">Dedication</span>
                 </div>
               </div>
               <a 
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=devanshdholiya2568@gmail.com" 
                 target="_blank"
                 rel="noreferrer"
-                className="px-6 py-3 bg-orange-500/10 hover:bg-orange-500 text-orange-500 hover:text-white text-xs font-bold uppercase tracking-widest rounded-xl transition-all border border-orange-500/20"
+                className="w-full sm:w-auto px-6 py-4 bg-orange-500/10 hover:bg-orange-500 text-orange-500 hover:text-white text-xs font-bold uppercase tracking-widest rounded-xl transition-all border border-orange-500/20 text-center"
               >
                 Work With Me
               </a>
