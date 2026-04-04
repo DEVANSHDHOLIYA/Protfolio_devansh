@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, User, Store, Wallet, ChefHat,ArrowRight } from 'lucide-react';
+import { ExternalLink, User, Store, HandCoins, ChefHat,ArrowRight } from 'lucide-react';
 
 const Github = ({ className }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -15,7 +15,7 @@ const projects = [
     tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
     github: "https://github.com/DEVANSHDHOLIYA",
     bgColor: "from-orange-500/20 to-orange-500/5",
-    icon: <ChefHat className="text-orange-500" size={56} />,
+    icon: <img src="/logo.png" className="text-orange-500" width={76} height={76} />,
     links: [
       { name: "User App", url: "https://mymealuser.vercel.app", icon: <User size={14} /> },
       { name: "Vendor App", url: "https://mymealvendor.vercel.app", icon: <Store size={14} /> }
@@ -27,7 +27,7 @@ const projects = [
     tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
     github: "https://github.com/SpendWithMe03",
     bgColor: "from-blue-500/20 to-blue-500/5",
-    icon: <Wallet className="text-blue-500" size={56} />,
+    icon: <HandCoins className="text-blue-500" size={56} />,
     links: [
       { name: "Live Site", url: "https://spendwithme.vercel.app", icon: <ExternalLink size={14} /> }
     ],
