@@ -10,8 +10,8 @@ const Github = ({ className }) => (
 
 const projects = [
   {
-    title: "MyMeal App",
-    description: "A comprehensive meal planner and subscription-based application. Featuring distinct portals for users and vendors. Built with the full MERN stack.",
+    title: "MyMeal",
+    description: "A comprehensive meal planner and subscription-based website. Featuring distinct portals for users and vendors. Built with the full MERN stack.",
     tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
     github: "https://github.com/DEVANSHDHOLIYA",
     bgColor: "from-orange-500/20 to-orange-500/5",
