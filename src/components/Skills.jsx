@@ -64,7 +64,7 @@ const itemVariants = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 relative bg-slate-900/20">
+    <section id="skills" className="py-24 relative bg-slate-100 dark:bg-slate-900/20">
       <div className="max-w-5xl mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -73,11 +73,11 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-            My <span className="text-orange-500">Skills</span>
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
+            My <span className="text-green-500">Skills</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-orange-600 to-orange-400 mx-auto rounded-full" />
-          <p className="text-slate-400 mt-6 text-lg">Technologies I work with every day</p>
+          <div className="w-20 h-1 bg-gradient-to-r from-green-600 to-green-400 mx-auto rounded-2xl" />
+          <p className="text-slate-500 dark:text-slate-400 mt-6 text-lg">Technologies I work with every day</p>
         </motion.div>
 
         <motion.div
@@ -92,18 +92,19 @@ export default function Skills() {
             key={skill.name}
             variants={itemVariants}
             whileHover={{ y: -4, scale: 1.02 }}
-            className="glass-panel p-4 md:p-6 flex flex-col items-center gap-3 md:gap-4 cursor-default group hover:bg-slate-800/40 transition-all duration-300 border-slate-800/40"
+            className="glass-panel p-4 md:p-6 flex flex-col items-center gap-3 md:gap-4 cursor-default group hover:bg-slate-200 dark:bg-slate-800/40 transition-all duration-300 border-slate-200 dark:border-slate-800/40"
           >
             <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center relative">
-              <div className="absolute inset-0 bg-orange-500/5 rounded-full blur-xl group-hover:bg-orange-500/10 transition-colors" />
+              <div className="absolute inset-0 bg-green-500/5 rounded-2xl blur-xl group-hover:bg-green-500/10 transition-colors" />
               <img
                 src={skill.logo}
                 alt={skill.name}
-                className="w-8 h-8 md:w-10 md:h-10 object-contain relative z-10 transition-transform duration-500 group-hover:rotate-6"
-                style={skill.name === 'Express.js' || skill.name === 'GitHub' ? { filter: 'invert(1)' } : {}}
+                className={`w-8 h-8 md:w-10 md:h-10 object-contain relative z-10 transition-transform duration-500 group-hover:rotate-6 ${
+                  skill.name === 'Express.js' || skill.name === 'GitHub' ? 'dark:invert' : ''
+                }`}
               />
             </div>
-            <span className="text-[10px] md:text-xs font-semibold tracking-wider uppercase text-slate-500 group-hover:text-orange-400 transition-colors text-center leading-tight">
+            <span className="text-[10px] md:text-xs font-semibold tracking-wider uppercase text-slate-500 group-hover:text-green-400 transition-colors text-center leading-tight">
               {skill.name}
             </span>
           </motion.div>

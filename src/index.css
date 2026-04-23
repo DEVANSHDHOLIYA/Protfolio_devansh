@@ -1,16 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
 @theme {
   --font-sans: "Inter", sans-serif;
-  
-  --color-slate-850: #141b26;
-  --color-slate-900: #0f172a;
-  --color-slate-950: #020617;
-  
-  --color-orange-400: #fb923c;
-  --color-orange-500: #f97316;
-  --color-orange-600: #ea580c;
 }
 
 @layer base {
@@ -19,19 +13,26 @@
     overflow-x: hidden;
   }
   body {
-    @apply bg-slate-950 text-slate-200 antialiased selection:bg-orange-500/30 selection:text-orange-200;
+    @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-200 antialiased selection:bg-green-500/30 selection:text-green-600 dark:selection:text-green-200;
     overflow-x: hidden;
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  }
+  html.dark body {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
   }
 }
 
 @layer utilities {
   .glass-panel {
-    @apply bg-slate-900/50 backdrop-blur-lg border border-slate-800/50 rounded-2xl;
+    @apply bg-white/70 dark:bg-slate-900/40 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/60 shadow-lg dark:shadow-none rounded-2xl transition-all duration-500 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:hover:shadow-[0_8px_30px_rgba(59,130,246,0.15)] hover:border-green-500/30 dark:hover:border-green-500/30 dark:hover:bg-slate-900/60 hover:-translate-y-1;
   }
   .glass-nav {
-    @apply bg-slate-950/80 backdrop-blur-md border-b border-slate-800/50;
+    @apply bg-white dark:bg-slate-950 border-b border-slate-200/60 dark:border-slate-800/60 shadow-sm transition-all duration-300;
   }
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-orange-600;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-700 dark:from-green-400 dark:to-green-600;
   }
 }

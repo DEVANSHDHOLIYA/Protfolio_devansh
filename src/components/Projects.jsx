@@ -14,8 +14,8 @@ const projects = [
     description: "A comprehensive meal planner and subscription-based website. Featuring distinct portals for users and vendors. Built with the full MERN stack.",
     tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
     github: "https://github.com/DEVANSHDHOLIYA",
-    bgColor: "from-orange-500/20 to-orange-500/5",
-    icon: <img src="/logo.png" className="text-orange-500" width={76} height={76} />,
+    bgColor: "from-green-500/20 to-green-500/5",
+    icon: <img src="/logo.png" className="text-green-500" width={76} height={76} />,
     links: [
       { name: "User App", url: "https://mymealuser.vercel.app", icon: <User size={14} /> },
       { name: "Vendor App", url: "https://mymealvendor.vercel.app", icon: <Store size={14} /> }
@@ -26,8 +26,8 @@ const projects = [
     description: "A smart expense tracker for travelers and groups. Track shared expenses, split bills, and view spending breakdowns.",
     tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
     github: "https://github.com/SpendWithMe03",
-    bgColor: "from-blue-500/20 to-blue-500/5",
-    icon: <HandCoins className="text-blue-500" size={56} />,
+    bgColor: "from-green-500/20 to-green-500/5",
+    icon: <HandCoins className="text-green-500" size={56} />,
     links: [
       { name: "Live Site", url: "https://spendwithme.vercel.app", icon: <ExternalLink size={14} /> }
     ],
@@ -45,10 +45,10 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-            Featured <span className="text-orange-500">Projects</span>
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
+            Featured <span className="text-green-500">Projects</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-orange-600 to-orange-400 mx-auto rounded-full" />
+          <div className="w-20 h-1 bg-gradient-to-r from-green-600 to-green-400 mx-auto rounded-2xl" />
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -59,59 +59,59 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="glass-panel overflow-hidden border-slate-800/50 hover:border-orange-500/30 transition-all duration-300 flex flex-col"
+              className="glass-panel overflow-hidden border-slate-200/50 dark:border-slate-800/50 hover:border-green-500/30 transition-all duration-300 flex flex-col"
             >
               {/* Simple Placeholder Visual */}
-              <div className={`aspect-video bg-gradient-to-br ${project.bgColor} flex items-center justify-center border-b border-slate-800/50 relative overflow-hidden group`}>
-                <div className="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className={`aspect-video bg-gradient-to-br ${project.bgColor} flex items-center justify-center border-b border-slate-200/50 dark:border-slate-800/50 relative overflow-hidden group`}>
+                <div className="absolute inset-0 bg-white dark:bg-slate-950/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <motion.div
                   whileHover={{ scale: 1.15, rotate: -5 }}
                   transition={{ type: 'spring', stiffness: 300 }}
-                  className="relative z-10 p-6 rounded-2xl bg-slate-950/40 backdrop-blur-sm border border-white/5 shadow-2xl"
+                  className="relative z-10 p-6 rounded-2xl bg-white dark:bg-slate-950/40 backdrop-blur-sm border border-white/5 shadow-2xl"
                 >
                   {project.icon}
                 </motion.div>
                 
                 {/* Secondary decorative elements */}
-                <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-3xl group-hover:bg-white/10 transition-colors" />
-                <div className="absolute -top-10 -left-10 w-40 h-40 bg-white/5 rounded-full blur-3xl group-hover:bg-white/10 transition-colors" />
+                <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white/5 rounded-2xl blur-3xl group-hover:bg-white/10 transition-colors" />
+                <div className="absolute -top-10 -left-10 w-40 h-40 bg-white/5 rounded-2xl blur-3xl group-hover:bg-white/10 transition-colors" />
               </div>
 
               <div className="p-6 md:p-8 flex-1 flex flex-col items-center text-center md:items-start md:text-left">
                 <div className="flex justify-between items-start w-full mb-4">
-                  <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-white group-hover:text-green-400 transition-colors">
                     {project.title}
                   </h3>
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-slate-500 hover:text-white transition-colors"
+                    className="text-slate-500 hover:text-slate-900 dark:text-white transition-colors"
                   >
                     <Github size={20} />
                   </a>
                 </div>
 
-                <p className="text-slate-400 mb-6 leading-relaxed flex-1 text-sm md:text-base">
+                <p className="text-slate-500 dark:text-slate-400 mb-6 leading-relaxed flex-1 text-sm md:text-base">
                   {project.description}
                 </p>
 
                 <div className="flex flex-wrap justify-center md:justify-start gap-1.5 md:gap-2 mb-8">
                   {project.tech.map((tech) => (
-                    <span key={tech} className="px-2.5 py-1 bg-slate-800/50 text-slate-400 text-[9px] md:text-[10px] uppercase tracking-wider font-semibold rounded-md border border-slate-700/30">
+                    <span key={tech} className="px-2.5 py-1 bg-slate-200 dark:bg-slate-800/50 text-slate-500 dark:text-slate-400 text-[9px] md:text-[10px] uppercase tracking-wider font-semibold rounded-md border border-slate-700/30">
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex flex-wrap items-center justify-center md:justify-start gap-5 pt-4 border-t border-slate-800/50 w-full">
+                <div className="flex flex-wrap items-center justify-center md:justify-start gap-5 pt-4 border-t border-slate-200/50 dark:border-slate-800/50 w-full">
                   {project.links.map((link) => (
                     <a
                       key={link.name}
                       href={link.url}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex items-center gap-1.5 text-[10px] md:text-xs font-bold text-orange-500 hover:text-orange-400 transition-colors uppercase tracking-widest group/link"
+                      className="flex items-center gap-1.5 text-[10px] md:text-xs font-bold text-green-500 hover:text-green-400 transition-colors uppercase tracking-widest group/link"
                     >
                       {link.icon} {link.name}
                       <ArrowRight size={10} className="opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all" />
